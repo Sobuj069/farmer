@@ -7,78 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <style>
-        body {
-            background-color: #3e6216;
-            color: white;
-        }
-        .hero {
-            background: url('main-slider-1-1 1.png') no-repeat center center/cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-        }
-        .btn-custom {
-            background-color: #f9a826;
-            border: none;
-        }
-       
-        .section-bg {
-            background: url('istockphoto-1292399669-612x612.jpg') no-repeat center center;
-            background-size: cover;
-            padding: 50px 20px 20px;
-            text-align: center;
-            color: white;
-            margin-top: 50px;
-            margin-bottom: 50px;
-        }
-        /* Card Styling */
-        .feature-box {
-            background: rgba(255, 255, 255, 0.2); /* Transparent background */
-            border-radius: 15px;
-            text-align: center;
-            backdrop-filter: blur(10px); /* Frosted glass effect */
-            transition: 0.3s;
-            padding: 20px;
-        }
-        .feature-box:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        .feature-box h4 {
-            color: #2e4a22;
-            font-weight: bold;
-            padding: 20px;
-        }
-        .feature-box i {
-            font-size: 40px;
-            margin-bottom: 10px;
-            color: #2e4a22;
-        }
-        .footer {
-    background-color:  #2e4a22  !important;
-    color: white !important;
-    padding: 20px 0;
-    border-top: 3px solid #28a745;
-}
-.footer-title {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
-.footer ul li a {
-    text-decoration: none;
-    color: white !important;
-    transition: color 0.3s ease;
-}
-.footer ul li a:hover {
-    color: #28a745 !important;
-}
-.footer-logo {
-    max-width: 40px;
-    vertical-align: middle;
-}
- 
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -104,7 +33,7 @@
     <header class="hero text-white">
         <div class="container">
             <h1>AGGRIFARM</h1>
-            <p>A digital marketplace for direct farmer-to-buyer transactions with bidding.</p>
+            <p id="simulated-text">A digital marketplace for direct farmer-to-buyer transactions with bidding.</p>
             <button class="btn btn-custom me-2">Log In Here</button>
             <button class="btn btn-custom">Sing-Up Here</button>
         </div>
@@ -122,7 +51,16 @@
         </div>
 
             <section class="container my-5 section-bg">
-                <h2 class="text-center">The Best Agriculture Market</h2>
+                <h2 class="text-center" style="color: #6B8E23; font-weight: bold;">The Best Agriculture Market</h2>
+                    <div class="simulated-text">
+                        <p id="simulated-text2">
+                            The best agriculture markets are vital hubs for both consumers and farmers. These markets typically offer a wide range of fresh, high-quality produce, ensuring that consumers have access to nutritious and seasonal items. Farmers benefit from these markets by being able to sell their goods directly to consumers, cutting out middlemen and thus maximizing their profits. This direct connection fosters stronger relationships and builds a sense of community
+                            The best agriculture markets also promote sustainability, often showcasing organic and eco-friendly produce. They provide consumers with a chance to support local farming and make healthier food choices while contributing to environmentally friendly practices.These markets are often at the forefront of innovations in food production and agricultural practices, offering educational opportunities to the public. In addition to produce, you may also find a range of artisanal products, value-added goods, and services that further enhance the agricultural ecosystem.
+                    
+                        </p>
+                    </div>
+                </section>
+                
                 <div class="row mt-4">
                     <div class="col-md-4">
                         <div class="feature-box">
@@ -183,8 +121,15 @@
                             <a href="#" class="btn btn-info btn-sm mx-1" target="_blank">
                                 <i class="fab fa-linkedin-in"></i>
                             </a>
+                            
+                            <!-- Contact Number and Email -->
+                            <div class="mt-3">
+                                <p><strong>Contact Us:</strong></p>
+                                <p><i class="fas fa-phone-alt"></i> <a href="tel:+1234567890" class="text-decoration-none text-white">+88 01721551970</a></p>
+                                <p><i class="fas fa-envelope"></i> <a href="mailto:contact@yourdomain.com" class="text-decoration-none text-white">johirulsobuj10@gmail.com</a></p>
+                            </div>
                         </div>
-                    </div>
+                        
                 </div>
             </footer>
             
@@ -194,5 +139,37 @@
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const simulatedText = document.getElementById('simulated-text2');
+            const textContent = simulatedText.innerHTML;
+            simulatedText.innerHTML = '';  // Clear text for simulation
+    
+            let i = 0;
+            let typingSpeed = 50;  // Speed of typing (ms per character)
+            let newLineSpeed = 2000; // Speed for new lines to be typed
+    
+            function typeWriter() {
+                if (i < textContent.length) {
+                    // Create a new line effect
+                    if (textContent.charAt(i) === '\n') {
+                        simulatedText.innerHTML += "<br>"; // Add line break
+                        i++;
+                        setTimeout(typeWriter, newLineSpeed);
+                    } else {
+                        simulatedText.innerHTML += textContent.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, typingSpeed);
+                    }
+                }
+            }
+    
+            typeWriter();
+        });
+    </script>
+    
+    
 </body>
 </html>
