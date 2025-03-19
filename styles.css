@@ -1,0 +1,241 @@
+body {
+    background-color: #3e6216;
+    color: white;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Hero section styling */
+.hero {
+    background: url('main-slider-1-1 1.png') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centers content horizontally */
+    text-align: center;
+}
+
+/* Custom button styling */
+.btn-custom {
+    background-color: #f9a826;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #e6891a; /* Darker shade on hover */
+}
+
+/* Section background styling with image and overlay */
+.section-bg {
+    position: relative;
+    background-image: url('istockphoto-1292399669-612x612.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 30px 0;
+    border-radius: 10px;
+    color: #fff;
+}
+
+/* Overlay styling for the background */
+.section-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+/* Ensure text content appears above the overlay */
+.section-bg > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Title styling */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+/* Feature box container styling */
+.feature-box {
+    text-align: center;
+    background-color: rgba(196, 250, 109, 0.8); /* Semi-transparent yellow-green background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Feature box icon styling */
+.feature-box i {
+    font-size: 3rem;
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+/* Hover effect on feature box */
+.feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Feature box title styling */
+.feature-box h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 767px) {
+    .hero {
+        height: auto; /* Adjust the hero section height on small screens */
+        padding: 50px 0;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .feature-box {
+        margin-bottom: 20px;
+        padding: 15px;
+    }
+}
+
+/* Footer section styling */
+.footer {
+    background-color: #2e4a22 !important;
+    color: white !important;
+    padding: 20px 0;
+    border-top: 3px solid #28a745;
+    text-align: center;
+}
+
+.footer-title {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin: 10px 0;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: white !important;
+    transition: color 0.3s ease;
+}
+
+.footer ul li a:hover {
+    color: #28a745 !important;
+}
+
+.footer-logo {
+    max-width: 40px;
+    vertical-align: middle;
+}
+
+/* Add additional customization to footer for smaller screens */
+@media (max-width: 767px) {
+    .footer-title {
+        font-size: 1.2rem;
+    }
+
+    .footer-logo {
+        max-width: 30px;
+    }
+}
+
+ /* Style for simulating the typing effect */
+#simulated-text {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    font-weight: 400;
+    white-space: nowrap;  /* Ensures no line breaks in the text */
+    overflow: hidden;     /* Hides text that hasn't been typed yet */
+    border-right: 2px solid #fff;  /* Creates the cursor effect */
+    width: 0;             /* Initial width is 0 to simulate typing */
+    animation: typing 8s steps(100) 1s forwards, blink 0.75s step-end  20s forwards;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+ /* Style for simulating the typing effect */
+/* Style for simulating the typing effect */
+/* Style for simulating the typing effect */
+#simulated-text2 {
+    font-size: 1.1rem;
+    color: #fff;
+    line-height: 1.8;
+    font-weight: 400;
+    white-space: normal;  /* Allows text to break into multiple lines */
+    overflow: hidden;     /* Hides text that hasn't been typed yet */
+    border-right: 2px solid #fff;  /* Creates the cursor effect */
+    width: 0;             /* Initial width is 0 to simulate typing */
+    animation: typing 20s steps(50) 1s forwards, blink 0.75s step-end 20s forwards;
+}
+
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* Cursor blink animation */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
